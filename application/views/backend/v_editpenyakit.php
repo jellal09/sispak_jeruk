@@ -37,17 +37,17 @@
                   </div> -->
                   <div class="form-group">
                     <label>Nama Penyakit</label>
-                    <input type="text" name="nama_penyakit" class="form-control" value="<?= $edit->nama_penyakit ?>">
+                    <input type="text" name="nama_penyakit" class="form-control" value="<?= $edit->nama_penyakit ?>" required>
                     <?= form_error('nama_penyakit', '<div class="text-small text-danger">', '</div>'); ?>
                   </div>
                   <div class="form-group">
                     <label>Detail Penyakit</label>
-                    <textarea type="text" name="detail_penyakit" class="form-control"><?= $edit->detail_penyakit ?></textarea>
+                    <textarea type="text" name="detail_penyakit" class="form-control" required><?= $edit->detail_penyakit ?></textarea>
                     <?= form_error('detail_penyakit', '<div class="text-small text-danger">', '</div>'); ?>
                   </div>
                   <div class="form-group">
                     <label>Penanganan</label>
-                    <textarea type="text" name="penanganan_penyakit" class="form-control"><?= $edit->penanganan_penyakit ?></textarea>
+                    <textarea type="text" name="penanganan_penyakit" class="form-control" required><?= $edit->penanganan_penyakit ?></textarea>
                     <?= form_error('penanganan_penyakit', '<div class="text-small text-danger">', '</div>'); ?>
                   </div>
                   <div class="form-group">

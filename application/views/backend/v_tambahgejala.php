@@ -37,7 +37,7 @@
                   </div>
                   <div class="form-group">
                     <label>Gejala</label>
-                    <input type="text" name="nama_gejala" class="form-control">
+                    <input type="text" name="nama_gejala" class="form-control" required>
                     <?= form_error('nama_gejala', '<div class="text-small text-danger">', '</div>'); ?>
                   </div>
 

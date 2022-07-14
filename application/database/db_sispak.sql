@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2022 at 08:04 PM
+-- Generation Time: Jul 14, 2022 at 03:45 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.27
 
@@ -49,80 +49,81 @@ INSERT INTO `tb_admin` (`kd_admin`, `username`, `password`) VALUES
 
 CREATE TABLE `tb_gejala` (
   `kd_gejala` varchar(10) NOT NULL,
-  `nama_gejala` varchar(100) NOT NULL
+  `nama_gejala` varchar(100) NOT NULL,
+  `kategori` enum('Batang','Daun','Buah') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_gejala`
 --
 
-INSERT INTO `tb_gejala` (`kd_gejala`, `nama_gejala`) VALUES
-('G001', 'Tunas muda keriting'),
-('G002', 'Tunas kering'),
-('G003', 'Tunas mati'),
-('G004', 'Daun menggulung'),
-('G005', 'Terdapat jamur berwarna hitam'),
-('G006', 'Terdapat bercak melingkar keperakan'),
-('G007', 'Tunas atau daun muda mengkerut'),
-('G008', 'Tunas atau daun muda menggulung'),
-('G009', 'Daun muda mudah rontok'),
-('G010', 'Terdapat bekas keperakan pada tangkai'),
-('G011', 'Timbul bercak kuning atau coklat pada daun'),
-('G012', 'Timbul bercak keperakan atau coklat pada buah'),
-('G013', 'Pada tunas muda atau buah muda terdapat bercak coklat kehitaman, tengahnya berwarna lebih terang'),
-('G014', 'Terdapat bercak pada buah disertai dengan cairan'),
-('G015', 'Terdapat lubang pada buah'),
-('G016', 'Buah busuk dan berguguran'),
-('G017', 'Bunga rontok'),
-('G019', 'Helai daun menebal'),
-('G020', 'Daun berguguran'),
-('G021', 'Daun kering'),
-('G022', 'Daun pada ujung tunas menghitam'),
-('G023', 'Terdapat bekas luka berwarna coklat keabuan pada buah'),
-('G024', 'Bekas berwarna kuning pada buah'),
-('G025', 'Buah gugur'),
-('G026', 'Buah kering'),
-('G027', 'Terdapat kutu seperti kapas putih pada buah'),
-('G028', 'Terdapat lubang kecil di bagian tengahnya'),
-('G029', 'Buah busuk'),
-('G030', 'Terdapat belatung di dalam buah'),
-('G031', 'Pertumbuhan tanaman lambat'),
-('G032', 'Daun pucat'),
-('G033', 'Ukuran daun kecil'),
-('G034', 'Daun berwarna kuning'),
-('G035', 'Ranting dan cabang kering'),
-('G036', 'Terjadi retakan pada pada kulit'),
-('G037', 'Terdapat lubang pada daun tua'),
-('G038', 'Ranting muda mati'),
-('G039', 'Buah terasa asam'),
-('G040', 'Biji buah rusak'),
-('G041', 'Buah berukuran kecil'),
-('G042', 'Pangkal buah berwarna oranye'),
-('G043', 'Muncul tonjolan di bawah daun'),
-('G044', 'Muncul tonjolan pada batang atau akar'),
-('G045', 'Kulit memprodukis gom'),
-('G046', 'Kulit kayu berwarna keabuan'),
-('G047', 'Kulit menjadi kering'),
-('G048', 'Kulit kayu pecah'),
-('G049', 'Kulit kayu mengelupas'),
-('G050', 'Tepung berwarna putih pada tanaman'),
-('G053', 'Daun muda mengkerut'),
-('G054', 'Bercak kecil pada daun'),
-('G055', 'Bercak kecil pada tangkai'),
-('G056', 'Bercak kecil pada buah'),
-('G057', 'Muncul semacam gabus berwarna kuning atau oranye'),
-('G058', 'Tepung berwarna hijau kebiruan pada kulit buah'),
-('G059', 'Pangkal buah busuk'),
-('G060', 'Munculnya warna coklat pada tangkai buah'),
-('G061', 'Ujung daun berwarna kuning'),
-('G062', 'Cabang menjadi kering'),
-('G063', 'Tanaman menjadi kering'),
-('G064', 'Luka yang terus membesar pada tepi daun'),
-('G065', 'Layu pada tunas muda'),
-('G066', 'Kuncup bunga menjadi layu'),
-('G067', 'Pangkal buah membesar'),
-('G068', 'Timbulnya bercak hijau gelap'),
-('G069', 'Terdapat luka berdiameter 3-5 mm');
+INSERT INTO `tb_gejala` (`kd_gejala`, `nama_gejala`, `kategori`) VALUES
+('G001', 'Tunas muda keriting', 'Batang'),
+('G002', 'Tunas kering', 'Batang'),
+('G003', 'Tunas mati', 'Batang'),
+('G004', 'Daun menggulung', 'Daun'),
+('G005', 'Terdapat jamur berwarna hitam', 'Daun'),
+('G006', 'Terdapat bercak melingkar keperakan', 'Daun'),
+('G007', 'Tunas atau daun muda mengkerut', 'Daun'),
+('G008', 'Tunas atau daun muda menggulung', 'Daun'),
+('G009', 'Daun muda mudah rontok', 'Daun'),
+('G010', 'Terdapat bekas keperakan pada tangkai', 'Batang'),
+('G011', 'Timbul bercak kuning atau coklat pada daun', 'Daun'),
+('G012', 'Timbul bercak keperakan atau coklat pada buah', 'Buah'),
+('G013', 'Pada tunas muda atau buah muda terdapat bercak coklat kehitaman, tengahnya berwarna lebih terang', 'Buah'),
+('G014', 'Terdapat bercak pada buah disertai dengan cairan', 'Buah'),
+('G015', 'Terdapat lubang pada buah', 'Buah'),
+('G016', 'Buah busuk dan berguguran', 'Buah'),
+('G017', 'Bunga rontok', 'Buah'),
+('G019', 'Helai daun menebal', 'Daun'),
+('G020', 'Daun berguguran', 'Daun'),
+('G021', 'Daun kering', 'Daun'),
+('G022', 'Daun pada ujung tunas menghitam', 'Daun'),
+('G023', 'Terdapat bekas luka berwarna coklat keabuan pada buah', 'Buah'),
+('G024', 'Bekas berwarna kuning pada buah', 'Buah'),
+('G025', 'Buah gugur', 'Buah'),
+('G026', 'Buah kering', 'Buah'),
+('G027', 'Terdapat kutu seperti kapas putih pada buah', 'Buah'),
+('G028', 'Terdapat lubang kecil di bagian tengahnya', 'Buah'),
+('G029', 'Buah busuk', 'Buah'),
+('G030', 'Terdapat belatung di dalam buah', 'Buah'),
+('G031', 'Pertumbuhan tanaman lambat', 'Batang'),
+('G032', 'Daun pucat', 'Daun'),
+('G033', 'Ukuran daun kecil', 'Daun'),
+('G034', 'Daun berwarna kuning', 'Daun'),
+('G035', 'Ranting dan cabang kering', 'Batang'),
+('G036', 'Terjadi retakan pada pada kulit', 'Batang'),
+('G037', 'Terdapat lubang pada daun tua', 'Daun'),
+('G038', 'Ranting muda mati', 'Batang'),
+('G039', 'Buah terasa asam', 'Buah'),
+('G040', 'Biji buah rusak', 'Buah'),
+('G041', 'Buah berukuran kecil', 'Buah'),
+('G042', 'Pangkal buah berwarna oranye', 'Buah'),
+('G043', 'Muncul tonjolan di bawah daun', 'Daun'),
+('G044', 'Muncul tonjolan pada batang atau akar', 'Batang'),
+('G045', 'Kulit memprodukis gom', 'Batang'),
+('G046', 'Kulit kayu berwarna keabuan', 'Batang'),
+('G047', 'Kulit menjadi kering', 'Batang'),
+('G048', 'Kulit kayu pecah', 'Batang'),
+('G049', 'Kulit kayu mengelupas', 'Batang'),
+('G050', 'Tepung berwarna putih pada tanaman', 'Batang'),
+('G053', 'Daun muda mengkerut', 'Daun'),
+('G054', 'Bercak kecil pada daun', 'Daun'),
+('G055', 'Bercak kecil pada tangkai', 'Batang'),
+('G056', 'Bercak kecil pada buah', 'Buah'),
+('G057', 'Muncul semacam gabus berwarna kuning atau oranye', 'Batang'),
+('G058', 'Tepung berwarna hijau kebiruan pada kulit buah', 'Batang'),
+('G059', 'Pangkal buah busuk', 'Buah'),
+('G060', 'Munculnya warna coklat pada tangkai buah', 'Buah'),
+('G061', 'Ujung daun berwarna kuning', 'Daun'),
+('G062', 'Cabang menjadi kering', 'Batang'),
+('G063', 'Tanaman menjadi kering', 'Batang'),
+('G064', 'Luka yang terus membesar pada tepi daun', 'Daun'),
+('G065', 'Layu pada tunas muda', 'Batang'),
+('G066', 'Kuncup bunga menjadi layu', 'Buah'),
+('G067', 'Pangkal buah membesar', 'Buah'),
+('G068', 'Timbulnya bercak hijau gelap', 'Daun'),
+('G069', 'Terdapat luka berdiameter 3-5 mm', 'Buah');
 
 -- --------------------------------------------------------
 
@@ -185,7 +186,14 @@ INSERT INTO `tb_hasil` (`kd_hasil`, `tanggal`, `kd_pengguna`, `penyakit`, `kd_ge
 (38, '2022-06-11', 'USR0042', 'a:3:{s:5:\"HP001\";s:6:\"0.6000\";s:5:\"HP002\";s:6:\"0.5000\";s:5:\"HP003\";s:6:\"0.4000\";}', 'a:3:{s:4:\"', 'HP001', 0.6),
 (39, '2022-06-13', 'USR0043', 'a:3:{s:5:\"HP010\";s:6:\"0.9100\";s:5:\"HP009\";s:6:\"0.8800\";s:5:\"HP022\";s:6:\"0.7732\";}', 'a:4:{s:4:\"', 'HP010', 0.91),
 (40, '2022-06-24', 'USR0044', 'a:1:{s:5:\"HP001\";s:6:\"0.6984\";}', 'a:2:{s:4:\"', 'HP001', 0.6984),
-(41, '2022-06-24', 'USR0045', 'a:2:{s:5:\"HP001\";s:6:\"0.8673\";s:5:\"HP017\";s:6:\"0.4800\";}', 'a:3:{s:4:\"', 'HP001', 0.8673);
+(41, '2022-06-24', 'USR0045', 'a:2:{s:5:\"HP001\";s:6:\"0.8673\";s:5:\"HP017\";s:6:\"0.4800\";}', 'a:3:{s:4:\"', 'HP001', 0.8673),
+(42, '2022-06-28', 'USR0046', 'a:1:{s:5:\"HP003\";s:6:\"0.3200\";}', 'a:1:{s:4:\"', 'HP003', 0.32),
+(43, '2022-06-28', 'USR0047', 'a:4:{s:5:\"HP001\";s:6:\"0.8673\";s:5:\"HP002\";s:6:\"0.5520\";s:5:\"HP017\";s:6:\"0.4800\";s:5:\"HP008\";s:6:\"0.3600\";}', 'a:5:{s:4:\"', 'HP001', 0.8673),
+(44, '2022-06-29', 'USR0048', 'a:5:{s:5:\"HP001\";s:6:\"0.4800\";s:5:\"HP002\";s:6:\"0.4800\";s:5:\"HP008\";s:6:\"0.4800\";s:5:\"HP003\";s:6:\"0.2400\";s:5:\"HP005\";s:6:\"0.1200\";}', 'a:4:{s:4:\"', 'HP001', 0.48),
+(45, '2022-07-14', 'USR0049', 'a:2:{s:5:\"HP001\";s:6:\"0.4800\";s:5:\"HP003\";s:6:\"0.3112\";}', 'a:3:{s:4:\"', 'HP001', 0.48),
+(46, '2022-07-14', 'USR0050', 'a:4:{s:5:\"HP001\";s:6:\"0.4800\";s:5:\"HP002\";s:6:\"0.4800\";s:5:\"HP008\";s:6:\"0.4800\";s:5:\"HP018\";s:6:\"0.4200\";}', 'a:3:{s:4:\"', 'HP001', 0.48),
+(47, '2022-07-14', 'USR0051', 'a:3:{s:5:\"HP002\";s:6:\"0.5000\";s:5:\"HP001\";s:6:\"0.3600\";s:5:\"HP004\";s:6:\"0.2400\";}', 'a:3:{s:4:\"', 'HP002', 0.5),
+(48, '2022-07-14', 'USR0052', 'a:1:{s:5:\"HP023\";s:6:\"0.5600\";}', 'a:1:{s:4:\"', 'HP023', 0.56);
 
 -- --------------------------------------------------------
 
@@ -306,7 +314,8 @@ INSERT INTO `tb_pengetahuan` (`kd_pengetahuan`, `kd_gejala`, `kd_penyakit`, `mb`
 (77, 'G026', 'HP022', 0.6, 0.3, 0.3),
 (78, 'G025', 'HP022', 0.6, 0.2, 0.4),
 (79, 'G068', 'HP023', 0.8, 0.1, 0.7),
-(80, 'G069', 'HP023', 0.8, 0.1, 0.7);
+(80, 'G069', 'HP023', 0.8, 0.1, 0.7),
+(81, 'G040', 'HP024', 0.6, 0.2, 0.4);
 
 -- --------------------------------------------------------
 
@@ -368,7 +377,14 @@ INSERT INTO `tb_pengguna` (`kd_pengguna`, `nama_pengguna`) VALUES
 ('USR0042', 'yoyo'),
 ('USR0043', 'fian'),
 ('USR0044', 'desta'),
-('USR0045', 'desta');
+('USR0045', 'desta'),
+('USR0046', 'dias'),
+('USR0047', 'feri'),
+('USR0048', 'dian'),
+('USR0049', 'vivian'),
+('USR0050', 'yoga'),
+('USR0051', 'desta'),
+('USR0052', 'siska');
 
 -- --------------------------------------------------------
 
@@ -474,7 +490,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_hasil`
 --
 ALTER TABLE `tb_hasil`
-  MODIFY `kd_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `kd_hasil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `tb_kondisi`
@@ -486,7 +502,7 @@ ALTER TABLE `tb_kondisi`
 -- AUTO_INCREMENT for table `tb_pengetahuan`
 --
 ALTER TABLE `tb_pengetahuan`
-  MODIFY `kd_pengetahuan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `kd_pengetahuan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

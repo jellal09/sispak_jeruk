@@ -39,7 +39,7 @@ class Penyakit extends CI_Controller
 
     $config['upload_path']        =    './assets/gambar/penyakit'; //penyimpanan ga,bar
     $config['allowed_types']    =    'jpg|jpeg|png'; //format gambar
-    $config['max_size']            =    10000; //max. ukuran gambar
+    $config['max_size']            =    1000; //max. ukuran gambar
 
     $this->load->library('upload', $config); //memanggil library upload
 
@@ -91,7 +91,7 @@ class Penyakit extends CI_Controller
 
     $config['upload_path']        =    './assets/gambar/penyakit';
     $config['allowed_types']    =    'jpg|jpeg|png';
-    $config['max_size']            =    10000;
+    $config['max_size']            =    1000;
 
     $this->load->library('upload', $config);
 

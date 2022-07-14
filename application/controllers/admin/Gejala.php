@@ -79,9 +79,9 @@ class Gejala extends CI_Controller
       $update = $this->M_gejala->M_editGejala($data, $id);
 
       if ($update) {
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data berhasil diupdate</div>');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data berhasil diubah</div>');
       } else {
-        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data tidak berhasil diupdate</div>');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Data tidak berhasil diubah</div>');
       }
 
       redirect('admin/Gejala/', $data);

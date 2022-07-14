@@ -34,7 +34,7 @@
                   <input type="hidden" name="kd_gejala" value="<?= $edit->kd_gejala ?>">
                   <div class="form-group">
                     <label>Nama Gejala</label>
-                    <input type="text" name="nama_gejala" class="form-control" value="<?= $edit->nama_gejala ?>">
+                    <input type="text" name="nama_gejala" class="form-control" value="<?= $edit->nama_gejala ?>" required>
                   </div>
 
                   <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
