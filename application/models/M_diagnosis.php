@@ -9,6 +9,28 @@ class M_diagnosis extends CI_Model
         return $query;
     }
 
+    public function tampilbatang()
+    {
+        $this->db->select('*')->from('tb_gejala');
+        $this->db->where('kategori', 'Batang');
+        $query = $this->db->get();
+        return $query;
+    }
+    public function tampilbuah()
+    {
+        $this->db->select('*')->from('tb_gejala');
+        $this->db->where('kategori', 'Buah');
+        $query = $this->db->get();
+        return $query;
+    }
+    public function tampildaun()
+    {
+        $this->db->select('*')->from('tb_gejala');
+        $this->db->where('kategori', 'Daun');
+        $query = $this->db->get();
+        return $query;
+    }
+
     function get_no_pengguna()
     {
         $q = $this->db->query("SELECT MAX(RIGHT(kd_pengguna,4)) AS kd_max FROM tb_pengguna");

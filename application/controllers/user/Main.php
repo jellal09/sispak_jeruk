@@ -41,8 +41,12 @@ class Main extends CI_Controller
   public function diagnosis()
   {
     $data['page_title'] = 'Home';
-    $data['data'] = $this->M_diagnosis->tampil()->result();
-    $this->load->view('frontend/v_index', $data);
+    // $data['data'] = $this->M_diagnosis->tampil()->result();
+    $data['databatang'] = $this->M_diagnosis->tampilbatang()->result();
+    $data['databuah'] = $this->M_diagnosis->tampilbuah()->result();
+    $data['datadaun'] = $this->M_diagnosis->tampildaun()->result();
+    // $this->load->view('frontend/v_index', $data);
+    $this->load->view('frontend/v_coba', $data);
   }
 
 
